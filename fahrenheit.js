@@ -1,15 +1,10 @@
-
 //debugger;
-function conversion(grados){
-  var valorConvertido;
-
-  if(grados == "valorC"){
-    valorConvertido = document.getElementById('valorC').value * 9/5 + 32;
-      return document.getElementById("valorF").value = Math.round(valorConvertido);
-  } else {
-    valorConvertido = document.getElementById("valorF").value -32 * 5 / 9;
-      return document.getElementById("valorC").value = Math.round(valorConvertido);
-  }
+function conversionFahrenheit(){
+  var valorConvertido = document.getElementById("valorC").value * 9/5 + 32;
+      document.getElementById("valorConvertido").value = (valorConvertido).toFixed(1) + " grados Fahrenheit";
 }
-//Funciona pero no como yo quisiera
-//conversion(250);
+
+function conversionCelsius(){
+  var valorConvertido = (document.getElementById("valorF").value - 32) * 5 / 9;
+      document.getElementById("valorConvertido").value = (valorConvertido).toFixed(1) + " grados Celsius";
+}
